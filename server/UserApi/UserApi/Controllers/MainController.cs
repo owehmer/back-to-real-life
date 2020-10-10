@@ -22,12 +22,12 @@ namespace UserApi.Controllers
             //Create a List of Claims, Keep claims name short    
             var permClaims = new List<Claim>();
             permClaims.Add(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
-            permClaims.Add(new Claim("valid", "1"));
-            permClaims.Add(new Claim("userid", "1"));
-            permClaims.Add(new Claim("name", "bilal"));
+            permClaims.Add(new Claim(JwtConfig.JWT_USER_ACTIVE_PROP, "1"));
+            permClaims.Add(new Claim(JwtConfig.JWT_USER_ID_PROP, "1"));
+            permClaims.Add(new Claim(JwtConfig.JWT_USER_NAME_PROP, "bilal"));
 
             //Create Security Token object by giving required parameters    
-            var token = new JwtSecurityToken(JwtConfig.ISSUER, //Issure    
+            var token = new JwtSecurityToken(JwtConfig.ISSUER, //Issure
                 JwtConfig.ISSUER, //Audience    
                 permClaims,
                 expires: DateTime.Now.AddDays(1),
@@ -63,7 +63,7 @@ namespace UserApi.Controllers
             if (identity != null)
             {
                 IEnumerable<Claim> claims = identity.Claims;
-                var name = claims.Where(p => p.Type == "name").FirstOrDefault()?.Value;
+                var name = identity.GetUserName();
                 return new
                 {
                     data = name

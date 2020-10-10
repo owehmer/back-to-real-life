@@ -6,7 +6,12 @@ services:
     image: postgres
     restart: always
     environment:
-      POSTGRES_PASSWORD: example
+      POSTGRES_USER: backtorl
+      POSTGRES_PASSWORD: backtorl
+      PGDATA: /var/lib/postgresql/data/mydata
+    volumes:
+      - ./postgresql-data:/var/lib/postgresql/data/mydata
+
 
   adminer:
     image: adminer

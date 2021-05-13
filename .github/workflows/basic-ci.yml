@@ -24,16 +24,16 @@ jobs:
 #          key: package.json
 
       # NPM Install TODO: Implement Cache
-      - name: NPM Install
-        run: npm install
+      - name: Yarn Install
+        run: yarn install
         working-directory: ./client
 
       - name: Build client
-        run: npm run build
+        run: yarn build
         working-directory: ./client
 
       - name: Run tests
-        run: npm run test
+        run: jest
         working-directory: ./client
 
 #      - name: Run linter

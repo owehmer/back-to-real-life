@@ -33,7 +33,7 @@ jobs:
         working-directory: ./client
 
       - name: Run tests
-        run: jest
+        run: yarn test
         working-directory: ./client
 
 #      - name: Run linter

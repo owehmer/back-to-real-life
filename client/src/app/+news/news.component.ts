@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from "../services/auth.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-news',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _authService: AuthService,
+              private _router: Router) { }
 
   ngOnInit(): void {
   }
 
+  logout() {
+    this._authService.logout();
+    this._router.navigate(['login']);
+  }
 }

@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NewsComponent } from './news.component';
+import { AuthService } from "../services/auth.service";
+import { FakeAuthService } from "../services/fake-auth.service";
+import { RouterTestingModule } from "@angular/router/testing";
 
 describe('NewsComponent', () => {
   let component: NewsComponent;
@@ -8,7 +11,16 @@ describe('NewsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NewsComponent ]
+      declarations: [ NewsComponent ],
+      providers: [
+        {
+          provide: AuthService,
+          useValue: FakeAuthService
+        }
+      ],
+      imports: [
+        RouterTestingModule
+      ]
     })
     .compileComponents();
   });

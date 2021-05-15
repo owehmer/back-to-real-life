@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from "@angular/forms";
+import { AuthService } from "../services/auth.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -14,13 +16,17 @@ export class LoginComponent {
     password: new FormControl()
   });
 
+  constructor(private _authService: AuthService,
+              private _router: Router) {
+  }
+
   registerClicked() {
     this.showRegister = true;
     this.form.reset();
   }
 
   tryLogin() {
-    console.info('Form Input', this.form.getRawValue());
+    this._authService.login();
+    this._router.navigate(['news']);
   }
-
 }

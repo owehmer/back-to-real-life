@@ -29,7 +29,7 @@ export class LoggedInGuard implements CanActivateChild, CanLoad {
   }
 
   private async _redirectToLoginPageWhenNotLoggedIn(): Promise<boolean> {
-    if (!this._authService.isLoggedIn) {
+    if (!this._authService.loginViaLocalstorage()) {
       await this._router.navigate(['/login']);
       return false;
     }

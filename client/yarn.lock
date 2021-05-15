@@ -1586,6 +1586,32 @@
     merge-source-map "^1.1.0"
     schema-utils "^2.7.0"
 
+"@ngrx/effects@^12.0.0":
+  version "12.0.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-12.0.0.tgz#87c0aeeb760f11205c9d7c3168169e753780c926"
+  integrity sha512-T2Xu5sfYXg5+88al8laYv6sSuQzIeIfPzuY2o+XOF1407qYtafTXDjWcPosIqH0HYNBjPMWZFZbdQOHVX38mrQ==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/entity@^12.0.0":
+  version "12.0.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/entity/-/entity-12.0.0.tgz#7a73ef0b349e2e63831ceb15c889389f0985704c"
+  integrity sha512-a5VOLE0mIB7Ro1IFbFGoddYXvjG2cxznmqsL5AnpE3A1MnubQCmQOxqHOyO1TQVMnh72IsvYDwb5YP46Hj6k+w==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/schematics@^12.0.0":
+  version "12.0.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/schematics/-/schematics-12.0.0.tgz#8cb38463a077640f24232074c26727ec4a57e920"
+  integrity sha512-fn++t/0K0rkJcqJUZ02ZpsP4kRZS0tAblGJrf/KlhK2HeaCArNwxq9cFReMvNLEsclCI4IsuJ0Hetylt8RolQg==
+
+"@ngrx/store-devtools@^12.0.0":
+  version "12.0.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-12.0.0.tgz#0f803028fa2bbb4d063017094284b6850dfe5dfb"
+  integrity sha512-juWT2HXoRzZ05R2kEn9BZNlpUwHTQN7OKxiUAVL4/TRdnnHmHKyJPiG3XXmsojEyjdrZc81xE2KxrYivUbL5EA==
+  dependencies:
+    tslib "^2.0.0"
+
 "@ngrx/store@^12.0.0":
   version "12.0.0"
   resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-12.0.0.tgz#398c703b14a7c78a9bc616d6a569be17a606f803"

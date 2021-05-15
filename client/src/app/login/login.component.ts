@@ -7,10 +7,17 @@ import { FormControl, FormGroup } from "@angular/forms";
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+  showRegister = false;
+
   form = new FormGroup({
     username: new FormControl(),
     password: new FormControl()
   });
+
+  registerClicked() {
+    this.showRegister = true;
+    this.form.reset();
+  }
 
   tryLogin() {
     console.info('Form Input', this.form.getRawValue());

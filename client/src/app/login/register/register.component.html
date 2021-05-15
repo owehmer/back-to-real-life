@@ -1,0 +1,30 @@
+<div class="form-container">
+  <h2>Register new account</h2>
+
+  <form (submit)="tryRegister()" [formGroup]="form">
+    <mat-form-field>
+      <mat-label>Username</mat-label>
+      <input matInput formControlName="username">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>E-Mail</mat-label>
+      <input matInput formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput type="password" formControlName="password">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Password confirmation</mat-label>
+      <input matInput type="password" formControlName="passwordConfirm">
+    </mat-form-field>
+
+    <div class="form-footer">
+      <a (click)="cancelRegister()">Back</a>
+      <button type="submit" mat-raised-button color="primary">Register</button>
+    </div>
+  </form>
+</div>

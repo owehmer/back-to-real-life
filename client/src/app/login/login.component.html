@@ -1,20 +1,27 @@
 <div class="form-container">
-  <h2>Login</h2>
+  <ng-container *ngIf="!showRegister; else showRegisterTemplate">
+    <h2>Login</h2>
 
-  <form (submit)="tryLogin()" [formGroup]="form">
-    <mat-form-field>
-      <mat-label>Username</mat-label>
-      <input matInput formControlName="username">
-    </mat-form-field>
+    <form (submit)="tryLogin()" [formGroup]="form">
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="username">
+      </mat-form-field>
 
-    <mat-form-field>
-      <mat-label>Password</mat-label>
-      <input matInput type="password" formControlName="password">
-    </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password">
+      </mat-form-field>
 
-    <div class="form-footer">
-      <a>Register</a>
-      <button type="submit" mat-raised-button color="primary">Submit</button>
-    </div>
-  </form>
+      <div class="form-footer">
+        <a (click)="registerClicked()">Register</a>
+        <button type="submit" mat-raised-button color="primary">Submit</button>
+      </div>
+    </form>
+  </ng-container>
+
+  <ng-template #showRegisterTemplate>
+    <app-register (registerAbort)="showRegister = false"
+                  (registerComplete)="showRegister = false"></app-register>
+  </ng-template>
 </div>

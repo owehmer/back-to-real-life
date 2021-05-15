@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  padding-top: 50px;
+}
+
+.form-container {
+  width: 230px;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 50px auto 0;
+  border: 1px solid #c1c1c1;
+}
+
+.form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}

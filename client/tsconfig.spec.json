@@ -4,6 +4,7 @@
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
     "emitDecoratorMetadata": true,
+    "allowJs": true,
     "types": [
       "jest"
     ]

@@ -4,7 +4,7 @@ import { LoginModule } from "./login/login.module";
 import { LoginComponent } from "./login/login.component";
 import { LoggedInGuard } from "./guards/logged-in.guard";
 
-export const routes: Routes = [
+const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,

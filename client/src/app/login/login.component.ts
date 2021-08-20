@@ -26,7 +26,9 @@ export class LoginComponent {
   }
 
   tryLogin() {
-    this._authService.login();
-    this._router.navigate(['news']);
+    if (this.form.valid) {
+      this._authService.login();
+      this._router.navigate(['news']);
+    }
   }
 }

@@ -3,19 +3,19 @@
     <h2>Login</h2>
 
     <form (submit)="tryLogin()" [formGroup]="form">
-      <mat-form-field>
+      <mat-form-field testid="username-ff">
         <mat-label>Username</mat-label>
-        <input matInput formControlName="username">
+        <input matInput formControlName="username" required>
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field testid="password-ff">
         <mat-label>Password</mat-label>
-        <input matInput type="password" formControlName="password">
+        <input matInput type="password" formControlName="password" required>
       </mat-form-field>
 
       <div class="form-footer">
         <a (click)="registerClicked()">Register</a>
-        <button type="submit" mat-raised-button color="primary">Submit</button>
+        <button type="submit" mat-raised-button color="primary" testid="submit">Submit</button>
       </div>
     </form>
   </ng-container>

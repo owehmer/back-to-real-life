@@ -26,7 +26,7 @@
     "@ngrx/entity": "^12.0.0",
     "@ngrx/store": "^12.0.0",
     "@ngrx/store-devtools": "^12.0.0",
-    "immer": "^9.0.2",
+    "immer": "^9.0.6",
     "reset-css": "^5.0.1",
     "rxjs": "~6.6.7",
     "ts-action": "^11.0.0",
